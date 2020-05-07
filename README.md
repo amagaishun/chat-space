@@ -28,7 +28,7 @@ Things you may want to cover:
 |------|----|-------|
 |name|string|null: false, foreign_key: true|
 |mail|string|null: false, unique: true|
-|passward|string|null: false|
+|password|string|null: false|
 |password confirmation|string|null: false|
 
 has_many :groups_users
