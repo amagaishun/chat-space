@@ -1,0 +1,21 @@
+.main-chat
+ .main-header
+  .main-header__test 
+   test
+   %p.main-header__test__member :Member name
+  .main-header__edit 
+   = link_to '#', class: 'btn' do "Edit"
+ .main-contents
+  .main-contents__info
+   %p.main-contents__info__message SHUN
+   %p.main-contents__info__date 2019/11/20(wed)17:43:01
+  .main-contents__comment おはよう！
+ .form
+  %form.massage
+   .massage-box
+    %input{type: "text", class: "massage-box__text", placeholder: "type a message"}
+    %label{class: "massage-box__image"}
+     =icon('fas', 'image')
+     %input{type: "file", class: "massage-box__image__file"}
+   %input{type: "submit", class: "submit-btn"}
+   

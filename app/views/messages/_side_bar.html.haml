@@ -1,0 +1,17 @@
+.side-chat
+ .side-header
+  .side-header__box
+   %p.side-header__box__name  SHUN
+   %ul.side-header__box__icon 
+    %li.side-header__box__edit
+     = link_to "#" do
+      = icon('fas', 'edit')
+    %li.side-header__box__gear
+     = link_to "#" do
+      = icon('fas', 'cog')
+ .side-contents
+  = link_to "#" do
+   .side-contents__box
+    %p.side-contents__box__name techcamp
+    %p.side-contents__box__message まだメッセージはありません
+  

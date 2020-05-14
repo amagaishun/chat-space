@@ -1,0 +1,177 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+
+.side-chat{
+  width: 300px;
+}
+
+.side-header{
+  color: #ffffff;
+ 
+  &__box{
+    height: 100px;
+    width: 300px;
+    font-weight: bold;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #253141;
+    align-items: center;
+  }
+    &__box__icon{
+     display: flex;
+    }  
+ 
+    &__box__gear{
+     padding-left: 5px;
+    }
+ 
+    .fa-edit:before{
+	   color: #ffffff ;
+    } 
+ 
+    .fa-cog:before{
+     color: #ffffff ;
+    }
+}
+
+.side-contents{
+ height: calc(100vh - 100px);
+ background-color: #2f3e51;
+ padding: 0 20px; 
+  a{
+    color: #ffffff;
+    text-decoration: none;
+  }
+  &__box{
+  }
+  &__box__name{
+   font-size: 15px;
+   padding-top: 20px;
+  }
+
+  &__box__message{
+   font-size: 11px;
+   margin-top: 5px;
+  }
+}
+
+
+.main-chat{
+  height: 100vh;
+  width: calc(100vw - 300px);
+}
+
+.main-header{
+  height: 100px;
+  width: 100%;
+  background-color: #ffffff;
+  margin-bottom: 1px #eeeeee;
+  display: flex;
+  justify-content: space-between;
+ 
+  &__test{
+   color: #333333;
+   font-size: 20px;
+   padding:0px 40px;
+   padding-top: 35px;
+    
+    p {
+    color: #999999;
+    font-size: 12px;
+    margin-top: 15px;
+    }
+  }
+ 
+  &__edit{
+   width: 72px;
+   color: #38aef0;
+   margin: 28px 20px 32px;
+   border: solid 1px;
+ 
+ .btn{
+   color: #38aef0;
+   font-size: 16px;
+   text-decoration: none;
+   padding: 20px;
+   line-height: 40px;
+   }
+  }
+}
+
+.main-contents{
+  height: calc(100vh - 100px - 90px);
+  background-color: #fafafa;
+  padding: 40px 46px;
+ 
+  &__info{
+   display: flex;
+   padding-bottom: 12px;
+  }
+  
+    &__info__message{
+     color: #333333;
+    }
+ 
+    &__info__date{
+     color: #999999;
+     font-size: 12px; 
+     margin-left: 5px;
+    }
+  
+  &__comment{
+   color: #434A54;
+   font-size: 14px;
+  }
+}
+
+.form{
+  background-color: #d2d2d2;
+  padding: 20px 40px;
+
+ form{
+   display: flex;
+   .massage-box{
+     display: flex;
+     width: 100%;
+     position: relative;
+     &__text{
+       height: 50px;
+       width: 100%;
+       color: #434a54;
+       border-style: none;
+       padding: 0 40px 0 10px;
+     }
+     &__image{
+       position: absolute;
+       top: 10px;
+       right: 10px;
+       cursor: pointer;
+       font-size: 1.3rem;
+     }
+     &__image__file{
+       display: none;
+     }
+   }
+ }
+ 
+ .submit-btn{
+   width: 100px;
+   height: 50px;
+   padding: 0 30px;
+   margin-left: 15px;
+   background-color: #38aef0;
+   color: white;
+   cursor: pointer;
+ }
+
+}
+
+
