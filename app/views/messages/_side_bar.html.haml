@@ -1,14 +1,15 @@
 .side-chat
  .side-header
   .side-header__box
-   %p.side-header__box__name  SHUN
+   = current_user.name
+  -#  %p.side-header__box__name  SHUN
    %ul.side-header__box__icon 
     %li.side-header__box__edit
-     = link_to "#" do
+     = link_to do
       = icon('fas', 'edit')
     %li.side-header__box__gear
-     = link_to "#" do
-      = icon('fas', 'cog')
+     = link_to edit_user_path(current_user) do
+       = icon('fas', 'cog')
  .side-contents
   = link_to "#" do
    .side-contents__box
