@@ -1,21 +1,22 @@
 .main-chat
- .main-header
-  .main-header__test 
-   test
-   %p.main-header__test__member :Member name
-  .main-header__edit 
-   = link_to '#', class: 'btn' do 
-    Edit
- .main-contents
-  .main-contents__info
-   %p.main-contents__info__message SHUN
-   %p.main-contents__info__date 2019/11/20(wed)17:43:01
-  .main-contents__comment おはよう！
- .form
-  %form.massage
-   .massage-box
-    %input{type: "text", class: "massage-box__text", placeholder: "type a message"}
-    %label{class: "massage-box__image"}
-     =icon('fas', 'image')
-     %input{type: "file", class: "massage-box__image__file"}
-   %input{type: "submit", class: "submit-btn"}
+  .main-header
+    .main-header__test 
+      = @group.name
+      %p.main-header__test__member
+        Member:
+        - @group.users.each do |user|
+          = user.name
+    .main-header__edit 
+      = link_to ' Edit',edit_group_path(@group), class: 'btn'
+  .main-contents
+    = render @messages
+  
+  .form
+    .massage-box
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'massage-box__text', placeholder: 'type a message'
+      .massage-box__mask
+        = f.label :image, class: 'massage-box__mask__image' do
+          = icon('fas', 'image')
+          = f.file_field :image, class: 'massage-box__mask__file'
+      = f.submit 'Send', class: 'submit-btn'
