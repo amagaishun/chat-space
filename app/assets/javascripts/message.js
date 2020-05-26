@@ -48,7 +48,7 @@ $(function(){
       e.preventDefault()
       var formData = new FormData(this);
       var url = $(this).attr('action');
-      
+
       $.ajax({
         url: url,
         type: 'POST',
@@ -66,7 +66,7 @@ $(function(){
       .fail(function() {
         alert("メッセージ送信に失敗しました");
       })
-        // return false;
+        return false;
     });
   });
 
