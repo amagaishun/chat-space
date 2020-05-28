@@ -10,6 +10,8 @@
 
 .side-chat{
   width: 300px;
+  color: white;
+  float: left;
 }
 
 .side-header{
@@ -41,16 +43,18 @@
 .groups{
  height: calc(100vh - 100px);
  background-color: #2f3e51;
- padding: 0 20px; 
+ padding:  20px 20px 0px; 
+ overflow: scroll;
+
  
    .group{
+    padding-bottom: 40px;
      a{
        color: #ffffff;
        text-decoration: none;
       }
       &__name{
        font-size: 15px;
-       padding-top: 20px;
       }
       &__message{
        font-size: 11px;
@@ -67,16 +71,15 @@
 
 .main-header{
   height: 100px;
-  width: 100%;
   background-color: #ffffff;
-  margin-bottom: 1px #eeeeee;
+  border-bottom: solid 1px #eee;
   display: flex;
   justify-content: space-between;
+  padding: 0px 40px;
  
   &__test{
    color: #333333;
    font-size: 20px;
-   padding:0px 40px;
    padding-top: 35px;
     
     p {
@@ -87,17 +90,18 @@
   }
  
   &__edit{
-   width: 72px;
+   height: 40px;
+   line-height: 40px;
    color: #38aef0;
-   margin: 28px 20px 32px;
-   border: solid 1px;
+   margin-top: 30px;
+   padding: 0 20px;
+   border: solid 1px #38aef0;
+   position: absolute;
+   right: 40px;
  
  .btn{
    color: #38aef0;
-   font-size: 16px;
-   text-decoration: none;
-   padding: 20px;
-   line-height: 40px;
+  text-decoration: none;
    }
   }
 }
@@ -105,24 +109,31 @@
 .main-contents{
   height: calc(100vh - 100px - 90px);
   background-color: #fafafa;
-  padding: 40px 46px;
- overflow: scroll;
-  &__info{
-   display: flex;
-   padding-bottom: 12px;
+  padding: 35px 0 0 40px;
+  overflow: scroll;
+ 
+  .message{
+    padding-bottom: 46px;
   }
-  
-    &__info__message{
-     color: #333333;
+
+  .upper-message{
+   display: flex;
+   margin-bottom: 12px;
+
+    &__user-name{
+     color: #434a54;
+     font-size: 16px;
+     font-weight: bold;
     }
  
-    &__info__date{
+    &__date{
      color: #999999;
      font-size: 12px; 
-     margin-left: 5px;
+     margin-left: 10px;
     }
+  }
   
-  &__comment{
+  .lower-message__content{
    color: #434A54;
    font-size: 14px;
   }

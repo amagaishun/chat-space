@@ -44,11 +44,9 @@ $(function(){
  
   $(function() {
     $('#new_message').on('submit', function(e){
-
       e.preventDefault()
       var formData = new FormData(this);
       var url = $(this).attr('action');
-
       $.ajax({
         url: url,
         type: 'POST',
@@ -72,6 +70,8 @@ $(function(){
 
       
     //省略
+  
+    
   var reloadMessages = function() {
     
         //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
@@ -89,6 +89,7 @@ $(function(){
     })
     .done(function(messages) {
       if (messages.length !== 0) {
+        console.log(messages.length);
       //追加するHTMLの入れ物を作る
       var insertHTML = '';
       //配列messagesの中身一つ一つを取り出し、HTMLに変換したものを入れ物に足し合わせる
@@ -103,8 +104,11 @@ $(function(){
     .fail(function() {
       alert('error');
     });
+    return false;
+  
   };
   if (document.location.href.match(/\/groups\/\d+\/messages/)) {
     setInterval(reloadMessages, 7000);
+    
   }
 });

@@ -3,7 +3,7 @@
     .main-header__test 
       = @group.name
       %p.main-header__test__member
-        Member:
+        Member :
         - @group.users.each do |user|
           = user.name
     .main-header__edit 
